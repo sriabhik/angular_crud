@@ -11,11 +11,12 @@ export class WelcomeComponent implements  OnInit{
 
   registeredStudent:any
 
-  name="Abhishek"
+  
   constructor(private userLogin : UserloginService,private routes:Router){}
   ngOnInit(): void {
 
       this.userLogin.getAllUser().subscribe((data)=>{
+       
         this.registeredStudent=data
         console.log(data);
         
@@ -23,8 +24,8 @@ export class WelcomeComponent implements  OnInit{
   }
 
 
-  updateUser(id:any){
-      this.routes.navigateByUrl(`/update/${id}`)
+  updateUser(custId:any){
+      this.routes.navigateByUrl(`/update/${custId}`)
   }
 
   deleteUser(id:any){
@@ -32,5 +33,9 @@ export class WelcomeComponent implements  OnInit{
       console.log(data);
       
     })
+  }
+  logout(){
+    this.userLogin.logout()
+    this.routes.navigateByUrl('/')
   }
 }

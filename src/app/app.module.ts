@@ -8,21 +8,24 @@ import { WelcomeComponent } from './pages/welcome/welcome.component';
 import { HttpClientModule } from  '@angular/common/http';
 import { CreateUserComponent } from './pages/create-user/create-user.component';
 import { UpdateStudentComponent } from './pages/update-student/update-student.component';
+import { authInterceptorProviders } from './service/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     WelcomeComponent,
     CreateUserComponent,
-    UpdateStudentComponent
+    UpdateStudentComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule ,
-    HttpClientModule
+    HttpClientModule,
+
   ],
-  providers: [],
+  providers: [authInterceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

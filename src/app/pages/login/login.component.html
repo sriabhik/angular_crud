@@ -1,13 +1,40 @@
-<div>
-
-    <input  style ="font-size: 40px" type="text" placeholder="email" [(ngModel)]="userData.email">
-    <br>
-    <br>
-    <input style ="font-size: 40px" type="text" placeholder="password" [(ngModel)]="userData.password">
-    <br>
-    <br>
-    <button style ="font-size: 30px" (click)="formSubmit()">login</button>
+ <div class="abc mx-auto" style="width: 18rem; ">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input [(ngModel)]="userData.email" type="email" class="form-control" id="exampleFormControlInput1"
+            placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">password</label>
+        <input [(ngModel)]="userData.password" type="email" class="form-control" id="exampleFormControlInput1"
+            placeholder="**********">
+    </div>
+    <button (click)="formSubmit()" class="btn btn-success">login</button>
     &nbsp;
-    <button style ="font-size: 30px" (click)="signup()">signUp</button>
-    
+    <button (click)="signup()" class="btn btn-primary">signUp</button>
 </div>
+
+
+
+
+  <!-- <div class="card mx-auto" style="width: 10rem;">
+   
+    <div class="card-body">
+        <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  [(ngModel)]="userData.email">
+              
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)]="userData.password">
+            </div>
+          
+            <button (click)="formSubmit()" class="btn btn-success">login</button>
+            &nbsp;
+            <button (click)="signup()" class="btn btn-primary">signUp</button>
+          </form>
+        
+    </div>
+  </div> -->

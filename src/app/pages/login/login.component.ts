@@ -26,8 +26,21 @@ export class LoginComponent {
     console.log("Inside method");
     
     this.loginService.loginMethod(this.userData).subscribe((data:any)=>{
-
+      console.log("data : "+data);
+      
+        this.loginService.loginUser(data.jwtToken);
+        console.log(data.jwtToken);
         this.router.navigateByUrl('/welcome')
+
+
+        // this.loginService.getCurrentUser().subscribe((user:any)=>{
+        //   console.log("get Current " + this.loginService.getToken());
+          
+        //   console.log(user)
+        //   this.loginService.setUser(user); 
+          
+      // })
+       
     })
   }
     signup(){
