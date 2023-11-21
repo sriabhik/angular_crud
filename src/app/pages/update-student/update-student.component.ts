@@ -18,7 +18,8 @@ export class UpdateStudentComponent implements OnInit{
 
   constructor(private routes:Router,
               private userService: UserloginService,
-              private _route:ActivatedRoute){}
+              private _route:ActivatedRoute,
+              private route : Router){}
 
   dataUser:any
   id:any
@@ -44,9 +45,10 @@ export class UpdateStudentComponent implements OnInit{
   formSubmit(){
         this.userService.updateUser(this.userData,this.id).subscribe((data:any)=>{
           console.log(data);
+          this.route.navigateByUrl('/welcome')
           
         })
-
+      
   }
 
   back(){

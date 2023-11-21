@@ -23,6 +23,7 @@ export class CreateUserComponent {
       console.log(data);
       
     })
+    this.route.navigateByUrl("")
   }
   login(){
       this.route.navigateByUrl("")

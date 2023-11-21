@@ -29,8 +29,10 @@ export class WelcomeComponent implements  OnInit{
   }
 
   deleteUser(id:any){
-    this.userLogin.deleteUser(id).subscribe((data:any)=>{
-      console.log(data);
+    this.userLogin.deleteUser(id).subscribe(()=>{
+      this.registeredStudent = this.registeredStudent.filter((hero: { custId: any; }) => hero.custId !== id);
+      // this.registeredStudent.splice(this.registeredStudent.findIndex(h => h.id === id));
+      
       
     })
   }

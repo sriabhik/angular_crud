@@ -3,19 +3,19 @@
 
 <table>
     <tr>
-        <th>name</th>
-        <th>email</th>
-        <th>mobile</th>
-        <th>update</th>
-        <th>delete</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Update</th>
+        <th>Delete</th>
     </tr>
     <tr *ngFor="let user of registeredStudent">
         <td>{{user.custName}}</td>
         <td>{{user.email}}</td>
         <td>{{user.mobileNumber}}</td>
-        <td> <button   (click)="updateUser(user.custId)" >update</button></td>
-        <td> <button (click)="deleteUser(user.custId)">delete</button></td>
+        <td> <button  class="btn btn-success" (click)="updateUser(user.custId)" >Edit</button></td>
+        <td> <button class="btn btn-danger" (click)="deleteUser(user.custId)">delete</button></td>
     </tr>
-    <button (click)="logout()" class="btn btn-primary">logout</button>
+    <button (click)="logout()" class="btn btn-primary " style="text-align: center; margin-top: 50px;">logout</button>
 </table>
 

@@ -1,4 +1,4 @@
-
+<!-- 
 <h1>Update Page </h1>
 <div>
     <input  style ="font-size: 40px" type="text" placeholder="name" [(ngModel)]="userData.custName">
@@ -10,11 +10,37 @@
     <input  style ="font-size: 40px" type="text" placeholder="email" [(ngModel)]="userData.email">
     <br>
     <br>
-    <input style ="font-size: 40px" type="text" placeholder="password" [(ngModel)]="userData.password">
+    
     <br>
     <br>
     <button style ="font-size: 30px" (click)="formSubmit()">update</button>
      &nbsp;
     <button style ="font-size: 30px" (click)="back()">cancel</button>
     
+</div> -->
+<h1>Update Page</h1>
+<div class="abc mx-auto" style="width: 18rem; ">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input [(ngModel)]="userData.email" type="email" class="form-control" id="exampleFormControlInput1"
+            placeholder="name@example.com">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Name </label>
+        <input [(ngModel)]="userData.custName" type="text" class="form-control" id="exampleFormControlInput1"
+            placeholder="jonhson">
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Mobile</label>
+        <input [(ngModel)]="userData.mobileNumber" type="number" class="form-control" id="exampleFormControlInput1"
+            placeholder="mobileNumber">
+    </div>
+    <!-- <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">password</label>
+        <input [(ngModel)]="userData.password" type="password" class="form-control" id="exampleFormControlInput1"
+            placeholder="**********">
+    </div> -->
+    <button (click)="formSubmit()" class="btn btn-success">Update</button>
+    &nbsp;
+    <button (click)="back()" class="btn btn-primary">Cancel</button>
 </div>
