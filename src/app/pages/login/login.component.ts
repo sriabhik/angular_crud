@@ -27,11 +27,15 @@ export class LoginComponent {
     
     this.loginService.loginMethod(this.userData).subscribe((data:any)=>{
       console.log("data : "+data);
-      
+
+      if(data.userRole == customer){
+          this.router.navigateByUrl("/customer_Dasboard")
+      }
+      else{
         this.loginService.loginUser(data.jwtToken);
         console.log(data.jwtToken);
         this.router.navigateByUrl('/welcome')
-
+      }
 
         // this.loginService.getCurrentUser().subscribe((user:any)=>{
         //   console.log("get Current " + this.loginService.getToken());
